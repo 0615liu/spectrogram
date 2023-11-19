@@ -1,5 +1,5 @@
 # mini-project-4 spectrogram
-#DFT
+
 void dft(int N,int table, float *x_re, float *x_im, float *X_re, float *X_im)
 {
 
