@@ -26,7 +26,6 @@ int cascadingfunction(int filnums,short*datatmp)
     int total=0;    int end;    int tmpsize;
     for (int filptr = 1; filptr <= filnums; filptr++)
     {
-
         char min4name[100];
         sprintf(min4name, "s%d.wav", filptr); 
         FILE *input  = fopen(min4name, "rb");
@@ -37,9 +36,9 @@ int cascadingfunction(int filnums,short*datatmp)
         }
 
         fseek(input ,24,SEEK_SET);
-
+        int tgee;
         fread(&end,1,sizeof(int),input); 
-
+        int seeking;
         fseek(input ,44,SEEK_SET);
 
         for(int i=0;i<(end/10);i++)
@@ -118,3 +117,5 @@ int main(int argc, char *argv[])
     fwrite(&MMSP.SubChun2Size, sizeof(int), 1, fp);
     fwrite(datatmp, sizeof(short), N, fp);
 }
+
+// make by liu-chia-wei 411086030

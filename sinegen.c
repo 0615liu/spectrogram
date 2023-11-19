@@ -140,10 +140,6 @@ int main(int argc, char *argv[])
     fwrite(&MMSP.SubChun2Size, sizeof(int), 1, fp);
  
     fclose(fp);  //close file
-
-    FILE *mini3;
-    mini3=fopen(argv[8],"w");
-     
-    fclose(mini3);
 }
  
+ // make by liu-chia-wei 411086030

@@ -28,7 +28,7 @@ struct RIfunction
     double imaginepart;
     double sigma;
 };
-
+//create real imagine part
 struct RIfunction multipler(struct RIfunction x, struct RIfunction y) //x for real y for imagine part
 {
     struct RIfunction cmp;
@@ -37,7 +37,7 @@ struct RIfunction multipler(struct RIfunction x, struct RIfunction y) //x for re
     //cmp.sigma=x.real* y.real * x.imagine * y.imagine;
     return cmp;
 }
-
+// in order to real imagine multipler and sigma
 struct RIfunction adder(struct  RIfunction x, struct RIfunction y) 
 {
     struct RIfunction cmp;
@@ -233,3 +233,4 @@ void ShortTimeFT(struct RIfunction* input, int sizeinput, int sizeestimate,int s
     }
 }
 
+// make by liu-chia-wei 411086030
