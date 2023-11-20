@@ -126,7 +126,7 @@ int main(int argc, char *argv[])
     }
 
     ShortTimeFT(input, N, sizeestimate,sizewindow, sizejump,X,argv[2],hammingwindow);
-    if(MMSP.SampleRate==16000)
+    if(MMSP.SampleRate==16000)    //two case for samplerate 16000 8000
     {
         for (int j=255;j>=0;j--)  //256-1
         {

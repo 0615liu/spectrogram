@@ -84,7 +84,7 @@ int main(int argc, char *argv[])
     MMSP.numChannels = 1;
     MMSP.SampleRate = fs;       
     MMSP.ByteRate = fs * 16 / 8; 
-    MMSP.BlockAlign = 4;
+    MMSP.BlockAlign = 2;
     MMSP.BitsPerSample = 16;
     MMSP.SubChunk2ID[0] = 'd';
     MMSP.SubChunk2ID[1] = 'a';

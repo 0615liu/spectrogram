@@ -118,9 +118,9 @@ int main(int argc, char *argv[])
     MMSP.NumChannels = 1;       //mono
     MMSP.SampleRate = fs;       //SampleRate 8000、44100
     MMSP.ByteRate = fs * m / 8; //SampleRate*NumChannels*m/8
-    MMSP.BlockAlign = 4;        //BlockAlign=NumChannels X BitsPerSample/8   could be 4
+    MMSP.BlockAlign = 2;        //BlockAlign=NumChannels X BitsPerSample/8   could be 4
     MMSP.BitsPerSample = m;
-    MMSP.SubChunk2ID[0] = 'd';
+    MMSP.SubChunk2ID[0] = 'd';   //data
     MMSP.SubChunk2ID[1] = 'a';
     MMSP.SubChunk2ID[2] = 't';
     MMSP.SubChunk2ID[3] = 'a';
@@ -138,8 +138,8 @@ int main(int argc, char *argv[])
     fwrite(&MMSP.BitsPerSample, sizeof(short), 1, fp);
     fwrite(&MMSP.SubChunk2ID, sizeof(char), 4, fp);
     fwrite(&MMSP.SubChun2Size, sizeof(int), 1, fp);
- 
+    fwrite(sinl16,sizeof(short),N,fp);
     fclose(fp);  //close file
 }
- 
+ //including sinegen_411086030
  // make by liu-chia-wei 411086030
